@@ -26,7 +26,7 @@ const PersonalityTest = () => {
         return 'Entrepreneurs, lawyers, psychologists, consultants, sales representatives, actors, engineers, scientists, inventors, marketers, computer programmers, comedians, computer analysts, credit investigators, journalists, psychiatrists, public relations, designers, writers, artists, musicians, politicians. Very freedom-oriented, you need a career that allows you to act independently and express your creativity and insight. You do not like following rules if they do not make sense to you and prefer working independently.';
       // Add cases for other personality types
       case 'INTJ':
-        return 'Your career choices are:  Entrepreneurs, lawyers, psychologists, consultants, sales representatives,'
+        return 'Your career choices are:  Entrepreneurs, lawyers, psychologists, consultants, sales representatives,';
       default:
         return 'Career choices will be displayed here.';
     }
