@@ -6,7 +6,7 @@ import { Login } from "./pages/login.tsx";
 import { Sign } from "./pages/signup.tsx";
 import { Blog } from "./pages/journaling.tsx";
 import { Profile }  from "./pages/profile.tsx";
-
+import PersonalityTest from "./pages/person.tsx"
 function App() {
 
     const linkStyle = {
@@ -27,7 +27,7 @@ function App() {
              <Link to ="/signup" style={linkStyle}>Sign up</Link>
              <Link to ="/journaling" style={linkStyle}>Journaling</Link>
              <Link to ="/profile" style={linkStyle}>     profile</Link>
-             
+             <Link to="/perdom" style={linkStyle}>     persin</Link>
           </nav>
         <Routes>
           <Route path="/" element={<Home/>} />
@@ -35,6 +35,7 @@ function App() {
           <Route path="/signup" element={<Sign/>} />
           <Route path="/journaling" element={<Blog/>} />
           <Route path="/profile" element={<Profile/>} />
+          <Route path="/perdom" element={<PersonalityTest/>} />
           <Route path="*" element={<h1>you are not in a page</h1>} />
         </Routes>
       </Router>
