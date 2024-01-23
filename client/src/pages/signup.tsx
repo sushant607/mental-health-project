@@ -11,7 +11,7 @@ export const Sign = () => {
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    axios.post('http://localhost:3001/register',{email,password})
+    axios.post('http://localhost:3001/register',{ email,password })
     .then(result => console.log(result))
     .catch( e => console.log(e) )
 }
