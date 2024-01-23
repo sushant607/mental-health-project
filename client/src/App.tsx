@@ -89,7 +89,7 @@ function App() {
           <Route path="*" element={<h1>you are not in a page</h1>} />
         </Routes>
          {/* Render the Chatbot component conditionally */}
-         //{chatbotOpen && <MyComponent onClose={toggleChatbot} />}
+        {chatbotOpen && <MyComponent onClose={toggleChatbot} />}
         {chatbotOpen && (
           <MyComponent onClose={toggleChatbot}>
             {/* Pass necessary props to Chatbot component */}
