@@ -10,13 +10,21 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  blogs: [
+  blogs:[
     {
       type: mongoose.Types.ObjectId,
       ref: "Blog",
     },
   ],
-});
+  personal_info: [
+    {
+      type: mongoose.Types.ObjectId,
+      ref: "personal_info",
+    },
+  ],
+},
+{ timestamps: true }
+);
 
 export const User = mongoose.model('User', userSchema);
 

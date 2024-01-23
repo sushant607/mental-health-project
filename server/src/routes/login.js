@@ -11,6 +11,11 @@ router.post('/login', async (req, res) => {
 
     if (user) {
       console.log("found user now enter home")
+      res.status(200).send({
+        success: true,
+        messgae: "login successfully",
+        user,
+      });
     } else {
       console.log("Invalid credentials")
     }

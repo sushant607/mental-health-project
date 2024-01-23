@@ -4,13 +4,17 @@ import cors from "cors";
 import { userRouter } from "./routes/signup.js";
 import { loginRouter } from "./routes/login.js";
 import { blogRouter } from "./routes/blog.js";
+import {blogDisplayRouter} from "./routes/display_blog.js";
+import { deleteRouter } from "./routes/delete_blog.js";
+import { personalinfoRouter } from "./routes/personal_info.js";
+import {infoDisplayRouter} from "./routes/display_info.js";
 
 const app = express();
 app.use(cors())
 app.use(express.json());
 
 mongoose.connect(
-  "mongodb://localhost:27017/megha?replicaSet=ReplicaSetName",
+  "mongodb://localhost:27017/megha&replicaSet=ReplicaSetName",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -20,5 +24,9 @@ mongoose.connect(
 app.use(userRouter)
 app.use(loginRouter)
 app.use(blogRouter)
+app.use(blogDisplayRouter)
+app.use(deleteRouter)
+app.use(personalinfoRouter)
+app.use(infoDisplayRouter)
 
 app.listen(3001, () => console.log("Server started"));
