@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Card, Button} from "react-bootstrap";
+import { Form, Button, Card,  Container } from "react-bootstrap";
+import { Link , useNavigate } from 'react-router-dom';
 
 export const UserBlogs = () => {
   const [blogs, setBlogs] = useState([]);
-
+  const navigate = useNavigate();
   // get user blogs
   const getUserBlogs = async () => {
     try {
@@ -23,19 +24,24 @@ export const UserBlogs = () => {
 
   useEffect(() => {getUserBlogs();}, []);
   
-  const handleDelete = async () => {
+  const handleDelete = async (blogId) => {
     try {
-      const { data } = await axios.delete('http://localhost:3001/Blogdelete');
+      const email = localStorage.getItem("userId");
+      const { data } = await axios.delete(`http://localhost:3001/Blogdelete/${blogId}`, {
+        data: { email }, 
+      });    
+      
       if (data?.success) {
         alert("Blog Deleted");
-        window.location.reload();
+        navigate("/journaling")
       }
     } catch (error) {
       console.log(error);
     }
   };
-  console.log(blogs);
-  
+
+  const handleUpdate = async (blogId) => {  navigate(`/updateBlog/${blogId}`) };
+
   return (
     <div>
     {blogs && blogs.length > 0 ? (
@@ -47,10 +53,10 @@ export const UserBlogs = () => {
               Date: {new Date(blog.createdAt).toLocaleDateString()}
             </Card.Subtitle>
             <Card.Text>{blog.description}</Card.Text>
-            <Button variant="primary" style={{ marginRight: '10px' }}>
+            <Button variant="primary" style={{ marginRight: '10px' }} onClick={() => handleUpdate(blog._id)}>
               Update
             </Button>
-            <Button variant="danger" onSubmit={handleDelete}>
+            <Button variant="danger" onClick={() => handleDelete(blog._id)}>
               Delete
             </Button>
           </Card.Body>

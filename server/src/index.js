@@ -6,6 +6,7 @@ import { loginRouter } from "./routes/login.js";
 import { blogRouter } from "./routes/blog.js";
 import {blogDisplayRouter} from "./routes/display_blog.js";
 import { deleteRouter } from "./routes/delete_blog.js";
+import {updateRouter} from "./routes/update_blog.js"
 import { personalinfoRouter } from "./routes/personal_info.js";
 import {infoDisplayRouter} from "./routes/display_info.js";
 
@@ -25,8 +26,9 @@ mongoose.connect(
 app.use(userRouter)
 app.use(loginRouter)
 app.use(blogRouter)
-app.use(blogDisplayRouter)
+app.use(updateRouter)
 app.use(deleteRouter)
+app.use(blogDisplayRouter)
 app.use(personalinfoRouter)
 app.use(infoDisplayRouter)
 
