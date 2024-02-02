@@ -14,7 +14,8 @@ app.use(cors())
 app.use(express.json());
 
 mongoose.connect(
-  "mongodb://localhost:27017/megha&replicaSet=ReplicaSetName",
+  "mongodb+srv://prj:prj1122@mhn.7hkahbo.mongodb.net/?retryWrites=true&w=majority",
+ // "mongodb://localhost:27017/megha&replicaSet=ReplicaSetName",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
