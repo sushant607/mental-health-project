@@ -706,5 +706,3 @@ export const PersonalityTest: React.FC = () => {
    </div>
   );
 };
-
-

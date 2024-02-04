@@ -30,7 +30,7 @@ export const Sign = () => {
           style={{ minHeight: '100vh' }}
         >
           <div className="w-100" style={{ maxWidth: '400px' }}>
-            <Card className="row border rounded-5 p-3 bg-white shadow box-area">
+            <Card className="row border rounded-5 p-3 shadow box-area" style={{backgroundColor:"#FFF3CF"}}>
               <Card.Body>
               <p className="text-center mb-4"><h2>Hi there!! </h2>We are happy to see you</p>
                 {/* <h2 className="text-center mb-4">Sign up</h2> */}
@@ -55,9 +55,11 @@ export const Sign = () => {
                       onChange={(e) => setPassword(e.target.value)}
                     />
                   </Form.Group>
-                  <Button type="submit" className="w-100 mt-3">
+                  <div style={{display:"flex",justifyContent:"center"}}>
+                  <Button type="submit" className="b">
                     Sign up
-                  </Button>
+                    </Button>
+                    </div>
                 </Form>
               </Card.Body>
               <Card.Footer>

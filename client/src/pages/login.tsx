@@ -18,7 +18,7 @@ export const Login = () =>{
         try{
             const {data} = await axios.post('http://localhost:3001/login',{email,password})
             if(data.success){ 
-                alert('success user logged in');
+                alert('Success User Logged In');
                 localStorage.setItem("userId", email);
                 dispatch(login())
                 navigate('/');
@@ -36,7 +36,7 @@ export const Login = () =>{
     <Container className=" d-flex justify-content-center align-items-center " style={{minHeight: "100vh" }}>
      <div className="w-100" 
      style={{ maxWidth: "400px" }}>
-        <Card className="row border rounded-5 p-3 bg-white shadow box-area">
+                        <Card className="row border rounded-5 p-3 shadow box-area" style={{ backgroundColor: "#FFF6E9"}}>
         <Card.Body>
             <p className="text-center mb-4"><h2>Welcome back!</h2> We are happy to see you</p>
             <Form onSubmit={handleSubmit}>
@@ -47,8 +47,13 @@ export const Login = () =>{
                 <Form.Group id="password">
                      <Form.Label></Form.Label>
                      <Form.Control type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} required />
-                </Form.Group>
-                <Button type="submit" className="w-100 mt-3">Log in</Button>
+                                    </Form.Group>
+                                    <div style={{display:"flex",justifyContent:"center"}}>
+                                    <Button type="submit"
+                                        // className="w-100 mt-3"
+                                        className='b'
+                                        >Log in</Button>
+                                        </div>
             </Form>
         </Card.Body>
         <Card.Footer>
