@@ -19,6 +19,7 @@ export const Blog = () => {
   return (
     <>
       <div
+        // className="container1"
         style={{
           //  backgroundImage: `url(${bgimg})`,le. Consider adding an import instead.
           backgroundSize: "cover",
