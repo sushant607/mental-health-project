@@ -528,7 +528,7 @@ export const PersonalityTest: React.FC = () => {
 
   return (
     
-    <div >
+    <div  >
       <head>
         <title>
           <h1>Personality Test</h1>
@@ -536,10 +536,7 @@ export const PersonalityTest: React.FC = () => {
       </head>
       <div >
         {(personalityType && careerChoices) || submitButtonClicked ? (
-          // <div>
-          //   <h2>Your Personality Type: {personalityType}</h2>
-          //   <p>Recommended Career Choices: {careerChoices}</p>
-          // </div>
+
           <div >
             <h2>Your Personality Type: {personalityType}</h2>
             <h4>Recommended Career Choices:</h4>
@@ -547,7 +544,7 @@ export const PersonalityTest: React.FC = () => {
 
           </div>
         ) : ( 
-        <div className="card1" style={{display:"flex",justifyContent:"center", alignItems:"center"}}>
+        <div className="card1" style={{display:"flex",justifyContent:"center", alignItems:"center",backgroundColor:"#F8E559"}} >
         {questions[currentQuestionIndex] && (
          <div key={currentQuestionIndex}>
            <h4>{questions[currentQuestionIndex].q}</h4>

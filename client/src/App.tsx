@@ -16,8 +16,9 @@ import { UserBlogs } from "./pages/showblog.tsx";
 import { Profile } from "./pages/profile.tsx";
 import Tracker from "./pages/Tracker.tsx";
 import { Habit } from "./pages/new-habit.js";
-import { store } from "./redux/store";
-import { PersonalityTest } from "./pages/personality.tsx";
+import { store } from "./redux/store"; 
+// import { PersonalityTest } from "./pages/personality.tsx";
+import { PersonalityTest } from "./pages/pe.tsx";
 import config from "./bot/config.js";
 import MessageParser from "./bot/MessageParser.jsx";
 import ActionProvider from "./bot/ActionProvider.jsx";
@@ -26,6 +27,7 @@ import "react-chatbot-kit/build/main.css";
 import { FaComment } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "./redux/store.ts";
+import chatbotIcon from './img/chatbot.png';
 
 type RootState = {
   isLogin: boolean;
@@ -69,6 +71,8 @@ function App() {
     marginLeft: "auto", // Adjust spacing between icon and text
     cursor: "pointer",
     color: "fff",
+    width:"45px",
+    height:"45px"
   };
   const isLogin = useSelector((state: RootState) => state.isLogin);
   const handleLogout = () => {
@@ -127,7 +131,14 @@ function App() {
               <Link to="/pe" style={linkStyle}>
                 Personality Test
               </Link>
-              <FaComment style={iconStyle} onClick={toggleChatbot} />
+              {/* <FaComment style={iconStyle} onClick={toggleChatbot} /> */}
+              <img
+  src={chatbotIcon}
+  alt="Chatbot"
+  style={iconStyle} // Apply your existing styles
+  onClick={toggleChatbot}
+/>
+
               {/* <button style={{ marginLeft: '10px', marginRight: '10px', }} >Logout</button> */}
               <div style={{ marginRight: "10px" }}>
                 <button onClick={handleLogout} className="Btn">
