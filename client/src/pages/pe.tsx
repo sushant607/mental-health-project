@@ -202,7 +202,7 @@ export const PersonalityTest: React.FC = () => {
         }}>
         {(personalityType && careerChoices) || submitButtonClicked ? (
           <div className="output" style={{backgroundColor:"yellow"}}>
-            <h2>Your Personality Type: {personalityType}</h2>
+            <h2 style={{textAlign:"center"}}>Your Personality Type: {personalityType}</h2>
             <h4>Recommended Career Choices:</h4>
             <p>{careerChoices}</p>
           </div>
