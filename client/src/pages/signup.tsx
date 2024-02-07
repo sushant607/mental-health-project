@@ -24,6 +24,7 @@ export const Sign = () => {
 
   return (
     <div
+    id='signuppp'
       style={{
         minHeight: '100vh',
         // backgroundImage: `url(${bgimg})`,
