@@ -13,23 +13,20 @@ export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e) =>{
     e.preventDefault();
-    try {
-      const { data } = await axios.post("http://localhost:3001/login", {
-        email,
-        password,
-      });
-      if (data.success) {
-        alert("Success User Logged In");
-        localStorage.setItem("userId", email);
-        dispatch(login());
-        navigate("/");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
+    try{
+        const {data} = await axios.post('http://localhost:3001/login',{email,password})
+        if(data.success){ 
+            alert(data.message);
+            localStorage.setItem("userId", email);
+            dispatch(login())
+            navigate('/');
+        } 
+    }catch(error)
+    { console.log(error);
+      alert("Invalid credentials"); }
+}
 
   return (
     <div

@@ -1,27 +1,33 @@
 import React, { useState } from 'react';
 import { Form, Button, Card } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link , useNavigate } from 'react-router-dom';
 import axios from "axios";
 // import bgimg from '../img/sign.jpg';
 
 export const Sign = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  const handleSubmit = (e) =>{
+  const navigate = useNavigate();
+  const handleSubmit = async (e) =>{
     e.preventDefault();
-    axios.post('http://localhost:3001/register',{ email,password })
-    .then(result => console.log(result))
-    .catch( e => console.log(e) )
-}
+    const {data} = await axios.post('http://localhost:3001/register',{ email,password })
+    try{
+    if(data.success){ 
+      alert(data.message);
+      localStorage.setItem("userId", email);
+      navigate('/login');
+  }else{ alert(data.message); }
+}catch(error)
+{ console.log(error) }
+};
 
   return (
     <div
       style={{
         minHeight: '100vh',
         // backgroundImage: `url(${bgimg})`,
-              backgroundSize: 'cover',
+        backgroundSize: 'cover',
       }}
     >
       <>
@@ -30,7 +36,7 @@ export const Sign = () => {
           style={{ minHeight: '100vh' }}
         >
           <div className="w-100" style={{ maxWidth: '400px' }}>
-            <Card className="row border rounded-5 p-3 shadow box-area" style={{backgroundColor:"#FFF3CF"}}>
+            <Card className="row border rounded-5 p-3 bg-white shadow box-area">
               <Card.Body>
               <p className="text-center mb-4"><h2>Hi there!! </h2>We are happy to see you</p>
                 {/* <h2 className="text-center mb-4">Sign up</h2> */}
@@ -55,11 +61,9 @@ export const Sign = () => {
                       onChange={(e) => setPassword(e.target.value)}
                     />
                   </Form.Group>
-                  <div style={{display:"flex",justifyContent:"center"}}>
-                  <Button type="submit" className="b">
+                  <Button type="submit" className="w-100 mt-3">
                     Sign up
-                    </Button>
-                    </div>
+                  </Button>
                 </Form>
               </Card.Body>
               <Card.Footer>

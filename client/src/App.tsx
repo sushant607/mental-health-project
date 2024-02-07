@@ -14,8 +14,8 @@ import { Blog } from "./pages/journaling.tsx";
 import { UpdateUserBlog } from "./pages/updateBlog.tsx";
 import { UserBlogs } from "./pages/showblog.tsx";
 import { Profile } from "./pages/profile.tsx";
-import Tracker from "./pages/Tracker.tsx";
-import { Habit } from "./pages/new-habit.js";
+//import Tracker from "./pages/Tracker.tsx";
+//import { Habit } from "./pages/new-habit.js";
 import { store } from "./redux/store"; 
 // import { PersonalityTest } from "./pages/personality.tsx";
 import { PersonalityTest } from "./pages/pe.tsx";
@@ -125,13 +125,9 @@ function App() {
               <Link to="/profile" style={linkStyle}>
                 Profile
               </Link>
-              <Link to="/tracker" style={linkStyle}>
-                Tracker
-              </Link>
               <Link to="/pe" style={linkStyle}>
                 Personality Test
               </Link>
-              {/* <FaComment style={iconStyle} onClick={toggleChatbot} /> */}
               <img
   src={chatbotIcon}
   alt="Chatbot"
@@ -161,8 +157,6 @@ function App() {
           <Route path="/journaling" element={<Blog />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/showblog" element={<UserBlogs />} />
-          <Route path="/tracker" element={<Tracker />} />
-          <Route path="/new-habit" element={<Habit />} />
           <Route path="/pe" element={<PersonalityTest />} />
           <Route path="*" element={<h1>you are not in a page</h1>} />
           <Route path="/updateBlog/:blogId" element={<UpdateUserBlog />} />

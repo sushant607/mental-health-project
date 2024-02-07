@@ -31,7 +31,9 @@ router.post('/createBlog', async (req, res) => {
       await existingUser.save({ session });
       await session.commitTransaction();
       console.log('Blog Created!');
-      res.status(201).json({ message: 'Blog Created!' });
+      res.status(201).send({ 
+        success: true,
+        message: 'Blog Created!' });
     } catch (error) {
       console.log('error: ' + error);  
       await session.abortTransaction();

@@ -9,6 +9,7 @@ import { deleteRouter } from "./routes/delete_blog.js";
 import {updateRouter} from "./routes/update_blog.js"
 import { personalinfoRouter } from "./routes/personal_info.js";
 import {infoDisplayRouter} from "./routes/display_info.js";
+import { review } from "./models/review.js";
 
 const app = express();
 app.use(cors())
@@ -31,5 +32,21 @@ app.use(deleteRouter)
 app.use(blogDisplayRouter)
 app.use(personalinfoRouter)
 app.use(infoDisplayRouter)
+
+
+app.post("/reviews", async (req, res) => {
+  const { reviews } = req.body;
+  const r = new review ({  reviews  });
+
+  try {
+    await r.save();
+    res.status(201).json({
+      success: true, 
+      message: 'Review created successfully' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Error saving review to the database' });
+  }
+});
 
 app.listen(3001, () => console.log("Server started"));

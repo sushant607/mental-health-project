@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Form, Button, Card, Container, Row, Col } from "react-bootstrap";
+import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 
 export const Profile = () => {
+  const navigate = useNavigate();
   const [Name, setName] = useState("");
   const [Age, setAge] = useState("");
   const [Gender, setGender] = useState("");
+  const [reviews, setreviews] = useState("");
   const [info, setInfo] = useState([]);
   const email = localStorage.getItem("userId");
   const handleGenderChange = (e) => {
@@ -19,7 +22,14 @@ export const Profile = () => {
       .then((result) => console.log(result))
       .catch((e) => console.log(e));
   };
-
+  const handleSubmit1 = async (e) => {
+    e.preventDefault();
+    const {data} = await axios.post("http://localhost:3001/reviews", { reviews })
+      if(data.success){ 
+        alert('Successfully Saved Review');
+    }
+  };
+  
   const getUserInfo = async () => {
     try {
       const response = await axios.get("http://localhost:3001/Infodisplay", {
@@ -65,7 +75,7 @@ export const Profile = () => {
                     info.map((userInfo, index) => (
                       <Card
                       className="row border p-3 bg-white shadow box-area"
-                      style={{ maxWidth: "1000px", minHeight: "70vh" }}
+                      style={{ maxWidth: "1000px", minHeight: "70vh",margin: "25px 0"}}
                     >
                       <Card.Header className="d-flex justify-content-center align-items-center ">
                         <h2>Profile</h2>
@@ -131,6 +141,7 @@ export const Profile = () => {
                         value={Gender}
                         required
                       >
+                        <option value="">gender</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                         <option value="other">Other</option>
@@ -162,7 +173,7 @@ export const Profile = () => {
             <Row>
               <Card>
                 <Card.Body>
-                  <Form style={{ minHeight: "50vh" }}>
+                  <Form onSubmit={handleSubmit1} style={{ minHeight: "50vh" }}>
                     <div>
                       <Form.Label>Write reviews</Form.Label>
                       <Form.Control
@@ -170,6 +181,8 @@ export const Profile = () => {
                         placeholder="review..."
                         style={{ height: "300px" }}
                         required
+                        value={reviews}
+                        onChange={(e) => setreviews(e.target.value)}
                       />
                       <div style={{ display: "flex", alignItems: "center", justifyContent: "center"}}>
                       <Button type="submit" style={{ maxHeight: "5vh"}}>
