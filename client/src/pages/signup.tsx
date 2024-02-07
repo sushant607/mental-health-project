@@ -21,7 +21,7 @@ export const Sign = () => {
       style={{
         minHeight: '100vh',
         // backgroundImage: `url(${bgimg})`,
-        backgroundSize: 'cover',
+              backgroundSize: 'cover',
       }}
     >
       <>

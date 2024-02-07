@@ -5,8 +5,8 @@ import img3 from '../img/home3.jpeg';
 
 export const Home = () =>{
     return(
-        <div style={{ backgroundColor: 'lightblue', }}>
-        <>
+        <div style={{ backgroundColor: 'lightblue'}}>
+            <>
                 <br />
                 <h1>Mental Health Navigator</h1>
         <div className="container">

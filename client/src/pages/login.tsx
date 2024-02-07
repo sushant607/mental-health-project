@@ -6,7 +6,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { login, logout } from "../redux/store.ts";
 // import bgimg from '../img/sign1.jpg';
-
+import backgim from '../img/home.png';
 export const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -36,6 +36,7 @@ export const Login = () => {
       style={{
         minHeight: "100vh",
         //  backgroundImage: `url(${bgimg})`,le. Consider adding an import instead.
+        backgroundImage: `url(${backgim})`,
         backgroundSize: "cover",
       }}
     >
@@ -47,7 +48,10 @@ export const Login = () => {
           <div className="w-100" style={{ maxWidth: "400px" }}>
             <Card
               className="row border rounded-5 p-3 shadow box-area"
-              style={{ backgroundColor: "#FFF6E9" }}
+              style={{ 
+                // backgroundColor: "#FFF6E9" 
+                backgroundColor:'#F6F6F6'
+              }}
             >
               <Card.Body>
                 <p className="text-center mb-4">
