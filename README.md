@@ -62,15 +62,15 @@ You can use icons too - find them [here](https://github.com/get-icon/geticon)
 - ReactJS
 - ExpressJS
 - Mongoose
-- Python
-- Flask
+- Flask , Flask_ngrok
+- Ngrok
 
 #### Database
 - MongoDB
 
-#### Computer Vision
-- OpenCV
-- etc.
+#### Natural language processing
+- Transformers
+- 
 
 ## 📈Progress
 
