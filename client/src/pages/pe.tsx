@@ -198,7 +198,7 @@ export const PersonalityTest: React.FC = () => {
     >
       <div style={{ backgroundImage: `url(${pebg})`}}>
         {(personalityType && careerChoices) || submitButtonClicked ? (
-          <div>
+          <div className="output" style={{backgroundColor:"yellow"}}>
             <h2>Your Personality Type: {personalityType}</h2>
             <h4>Recommended Career Choices:</h4>
             <p>{careerChoices}</p>
