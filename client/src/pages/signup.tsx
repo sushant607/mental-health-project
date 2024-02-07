@@ -62,9 +62,11 @@ export const Sign = () => {
                       onChange={(e) => setPassword(e.target.value)}
                     />
                   </Form.Group>
-                  <Button type="submit" className="w-100 mt-3">
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                  <Button type="submit" className="b">
                     Sign up
                   </Button>
+                  </div>
                 </Form>
               </Card.Body>
               <Card.Footer>

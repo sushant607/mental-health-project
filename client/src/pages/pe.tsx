@@ -219,6 +219,7 @@ export const PersonalityTest: React.FC = () => {
                     flexDirection: "column",
                     justifyContent: "center",
                     height: "300px",
+                    marginLeft:"20px"
                     // backgroundColor: "#FFB000",
                     // background:"linear-gradient(to right,white,#71C9CE)"
                   }}
