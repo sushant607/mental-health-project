@@ -66,7 +66,7 @@ export const Profile = () => {
     getUserInfo();
   }, []);
   return (
-    <>
+    <div style={{backgroundImage:"linear-gradient(to right,#E3FDFD,#CBF1F5,#A6E3E9,#71C9CE)"}}>
       <Container>
         <Row>
           <Col>
@@ -141,13 +141,13 @@ export const Profile = () => {
                         value={Gender}
                         required
                       >
-                        <option value="">gender</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
+                        <option value="">Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
                       </select>
                     </div>
-                    <Button type="submit" style={{ maxHeight: "5vh" }}>
+                    <Button type="submit" style={{ maxHeight: "auto" }}>
                       Submit
                     </Button>
                   </div>
@@ -197,6 +197,6 @@ export const Profile = () => {
           </Col>
         </Row>
       </Container>
-    </>
+    </div>
   );
 };

@@ -3,7 +3,7 @@ import {Container} from "react-bootstrap";
 import img1 from '../img/hm1.png';
 import img2 from '../img/hm2.png';
 import img3 from '../img/hm3.png';
-import img from '../img/homebg.png';
+import img from '../img/11.png';
 
 export const Home = () =>{
     return(
@@ -13,17 +13,18 @@ export const Home = () =>{
         backgroundSize: 'cover',
          }}>
         <>
-        <div className="jumbotron text-center"
+        {/* <div className="jumbotron text-center"
         style={{  minHeight: "90vh",  
        // padding: "30px", 
         border: "1px solid white", }}>
             <Container className=" d-flex  align-items-center " style={{  minHeight: "50vh" }}>
-            <div><h1 className="display-2">Mental Health Support</h1></div>
+            <div><h1 style={{color:"white", fontSize:"50px",fontWeight:"10px"}}>Mental Health Support</h1></div>
             </Container>
             <Container className=" d-flex align-items-center ">
             <p className="lead">Your mental well-being is important. Find resources and support here.</p>
             </Container>
-        </div>
+        </div> */}
+        
         <br/>
         <br/>
         <div className="container">

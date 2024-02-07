@@ -32,7 +32,11 @@
 
 ## 📝Description
 
+<<<<<<< HEAD
 Add your **project description** here. Your project description should cover how your website/app works. That way you can convey what your project is without the need for anyone to view the code. A more *detailed README* in your project repository is encouraged, which can include build and use instructions etc.
+=======
+Add your *project description* here. Your project description should cover how your website/app works. That way you can convey what your project is without the need for anyone to view the code. A more detailed README in your project repository is encouraged, which can include build and use instructions etc.
+>>>>>>> dfed6d7f6b6a8786672589f50b9a00bd767bce78
 
 1. Include features and their usecases in bullet points
 
@@ -49,7 +53,11 @@ Add any more links/resources you used for your project
 
 ## 🤖Tech-Stack
 
+<<<<<<< HEAD
 Mention all languages/libraries/frameworks used in your project **domain-wise**   
+=======
+Mention all languages/libraries/frameworks used in your project *domain-wise*   
+>>>>>>> dfed6d7f6b6a8786672589f50b9a00bd767bce78
 You can use icons too - find them [here](https://github.com/get-icon/geticon) 
 
 #### Front-end
@@ -62,15 +70,26 @@ You can use icons too - find them [here](https://github.com/get-icon/geticon)
 - ReactJS
 - ExpressJS
 - Mongoose
+<<<<<<< HEAD
 - Python
 - Flask
+=======
+- Flask , Flask_ngrok
+- Ngrok
+>>>>>>> dfed6d7f6b6a8786672589f50b9a00bd767bce78
 
 #### Database
 - MongoDB
 
+<<<<<<< HEAD
 #### Computer Vision
 - OpenCV
 - etc.
+=======
+#### Natural language processing
+- Transformers
+- 
+>>>>>>> dfed6d7f6b6a8786672589f50b9a00bd767bce78
 
 ## 📈Progress
 
@@ -140,5 +159,8 @@ You'll have to link the screenshots from your drive folder here.
 
 Use this template as a guide for writing your documentation. Feel free to customize and adapt it for you project.  
 For more Markdown syntax help, visit [here](https://www.markdownguide.org/basic-syntax/)
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> dfed6d7f6b6a8786672589f50b9a00bd767bce78
