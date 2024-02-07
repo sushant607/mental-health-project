@@ -133,9 +133,10 @@
 
 .b:hover {
   background-color:
-  rgba(46, 229, 157, 0.4);
+  /* rgba(46, 229, 157, 0.4); */
+  #176B87;
    /* #40A2E3; */
-  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  box-shadow: 0px 15px 20px rgba(46, 162, 229, 0.4);
   color: #fff;
   transform: translateY(-7px);
 }
@@ -144,3 +145,41 @@
   transform: translateY(-1px);
 }
 
+
+/* Overall background */
+.app-background {
+  background-image: url("img/home.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Form container */
+.form-container {
+  min-height: 100vh;
+}
+
+/* Form wrapper */
+.form-wrapper {
+  max-width: 700px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 15px; /* Rounded corners */
+}
+
+/* Card */
+.update-card {
+  background-color: #fff; /* Override Bootstrap's default background */
+}
+
+/* Other styles */
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+#signuppp{
+  background-image: linear-gradient(to right,#E3FDFD,#CBF1F5,#A6E3E9,#71C9CE);
+}

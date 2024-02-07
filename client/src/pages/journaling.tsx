@@ -2,24 +2,25 @@ import React, { useState, useEffect } from "react";
 import { Form, Button, Card } from "react-bootstrap";
 import axios from "axios";
 import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 //import axios from "axios";
 
 export const Blog = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const email = localStorage.getItem("userId");
-  const handleSubmit = (e) => {
+  const navigate = useNavigate();
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:3001/createBlog", { title, description, email })
-      .then((result) => console.log(result))
-      .catch((e) => console.log(e));
+    const { data } = await axios.post("http://localhost:3001/createBlog", { title, description, email });
+      if (data?.success) {
+        alert("Blog Saved!");
+        navigate("/showblog");
+      }
   };
   return (
     <>
       <div
-        // className="container1"
         style={{
           //  backgroundImage: `url(${bgimg})`,le. Consider adding an import instead.
           backgroundSize: "cover",

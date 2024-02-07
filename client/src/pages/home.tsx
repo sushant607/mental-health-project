@@ -1,21 +1,45 @@
 import React from 'react';
+<<<<<<< HEAD
 import img1 from '../img/home1.jpeg';
 import img2 from '../img/home2.jpeg';
 import img3 from '../img/home3.jpeg';
  import Testimonial from './components/Testimonial';
 // import TestimonialCard from './components/TestimonialCard';
+=======
+import {Container} from "react-bootstrap";
+import img1 from '../img/hm1.png';
+import img2 from '../img/hm2.png';
+import img3 from '../img/hm3.png';
+import bgimg from '../img/homebg.png';
+>>>>>>> origin/main
 
 export const Home = () =>{
     return(
-        <div style={{ backgroundColor: 'lightblue', }}>
+        <div style={{ //backgroundColor: 'lightblue',
+            minHeight: "100vh", 
+        backgroundImage: `url(${bgimg})`,
+        backgroundSize: 'cover',
+         }}>
         <>
-                <br />
-                <h1>Mental Health Navigator</h1>
+        {/* <div className="jumbotron text-center"
+        style={{  minHeight: "90vh",  
+       // padding: "30px", 
+        border: "1px solid white", }}>
+            <Container className=" d-flex  align-items-center " style={{  minHeight: "50vh" }}>
+            <div><h1 style={{color:"white", fontSize:"50px",fontWeight:"10px"}}>Mental Health Support</h1></div>
+            </Container>
+            <Container className=" d-flex align-items-center ">
+            <p className="lead">Your mental well-being is important. Find resources and support here.</p>
+            </Container>
+        </div> */}
+        
+        <br/>
+        <br/>
         <div className="container">
             <div className="row">
                 <div className="col-md-4">
                     <div className="card">
-                        <img src={img1}  className="card-img-top" style={{ height: '500px' }} alt="Understanding Mental Health Image" />
+                        <img src={img1}  className="card-img-top" style={{ height: '300px' }} alt="Understanding Mental Health Image" />
                         <div className="card-body">
                             <h5 className="card-title">Understanding Mental Health</h5>
                             <p className="card-text">Learn about different mental health conditions and how they can affect individuals.</p>
@@ -25,7 +49,7 @@ export const Home = () =>{
                 </div>
                 <div className="col-md-4">
                     <div className="card">
-                        <img src={img2}  className="card-img-top" style={{ height: '500px' }} alt="Find Support Groups Image"/>
+                        <img src={img2}  className="card-img-top" style={{ height: '300px' }} alt="Find Support Groups Image"/>
                         <div className="card-body">
                             <h5 className="card-title">Find Support Groups</h5>
                             <p className="card-text">Connect with others who may be experiencing similar challenges. Support is crucial.</p>
@@ -35,7 +59,7 @@ export const Home = () =>{
                 </div>
                 <div className="col-md-4">
                     <div className="card">
-                        <img src={img3}  className="card-img-top" style={{ height: '500px' }} alt="Professional Help Image"/>
+                        <img src={img3}  className="card-img-top" style={{ height: '300px' }} alt="Professional Help Image"/>
                         <div className="card-body">
                             <h5 className="card-title">Professional Help</h5>
                             <p className="card-text">Seek help from mental health professionals. Find therapists and counselors near you.</p>
