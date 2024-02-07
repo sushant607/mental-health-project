@@ -80,6 +80,7 @@ function App() {
       dispatch(logout());
       alert("Logout Successfully");
       localStorage.clear();
+      window.location.href = "/"; 
     } catch (error) {
       console.log(error);
     }
