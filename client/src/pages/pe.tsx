@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Card } from "react-bootstrap";
 import "./Personality.css";
-import pebg from  '../img/pebg.jpeg'
+// import pebg from  '../img/pebg.jpeg'
 interface Question {
   q: string;
   f: string;
@@ -190,13 +190,16 @@ export const PersonalityTest: React.FC = () => {
   return (
     <div
       style={{
-        backgroundImage: `url(${pebg})`,
+        // backgroundImage: `url(${pebg})`,       
         height: "100%",
         margin: "0",
         padding: "0",
       }}
     >
-      <div style={{ backgroundImage: `url(${pebg})`}}>
+      <div style={{ 
+        // backgroundImage: `url(${pebg})`
+
+        }}>
         {(personalityType && careerChoices) || submitButtonClicked ? (
           <div>
             <h2>Your Personality Type: {personalityType}</h2>
@@ -204,7 +207,10 @@ export const PersonalityTest: React.FC = () => {
             <p>{careerChoices}</p>
           </div>
         ) : (
-          <div style={{ margin: "0", backgroundImage: `url(${pebg})` }}>
+          <div style={{ margin: "0", 
+          // backgroundImage: `url(${pebg})` 
+          background:"linear-gradient(to right, #2C7873, #17A2B8)"
+          }}>
             {questions[currentQuestionIndex] && (
               <div key={currentQuestionIndex}>
                 <div
@@ -214,6 +220,7 @@ export const PersonalityTest: React.FC = () => {
                     justifyContent: "center",
                     height: "300px",
                     // backgroundColor: "#FFB000",
+                    // background:"linear-gradient(to right,white,#71C9CE)"
                   }}
                 >
                   <h4 className="he" style={{}}>
