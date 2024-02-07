@@ -3,7 +3,7 @@ import { Form, Button, Card, Container } from "react-bootstrap";
 import axios from "axios";
 import { Link , useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-
+import img from '../img/11.png';
 
 export const UpdateUserBlog = () => {
   const [title, setTitle] = useState("");
@@ -33,7 +33,7 @@ export const UpdateUserBlog = () => {
     <>
       <div
         style={{
-          backgroundSize: "cover",
+          backgroundSize: "cover", backgroundImage: `url(${img})`
         }}
       >
         <Container

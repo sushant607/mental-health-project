@@ -3,7 +3,7 @@ import { Form, Button, Card } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { Link , useNavigate } from 'react-router-dom';
 import axios from "axios";
-// import bgimg from '../img/sign.jpg';
+import bgimg from '../img/mI.png';
 
 export const Sign = () => {
   const [email, setEmail] = useState('');
@@ -26,7 +26,7 @@ export const Sign = () => {
     <div
       style={{
         minHeight: '100vh',
-        // backgroundImage: `url(${bgimg})`,
+        backgroundImage: `url(${bgimg})`,
         backgroundSize: 'cover',
       }}
     >

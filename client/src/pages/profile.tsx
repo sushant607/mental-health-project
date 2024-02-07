@@ -103,7 +103,7 @@ export const Profile = () => {
                     ):(
                       <Card
                       className="row border p-3 bg-white shadow box-area"
-                      style={{ maxWidth: "1000px", minHeight: "70vh" }}
+                      style={{ maxWidth: "1000px", minHeight: "70vh",margin: "25px 0" }}
                     >
                       <Card.Header className="d-flex justify-content-center align-items-center ">
                         <h2>Profile</h2>

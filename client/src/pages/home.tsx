@@ -3,13 +3,13 @@ import {Container} from "react-bootstrap";
 import img1 from '../img/hm1.png';
 import img2 from '../img/hm2.png';
 import img3 from '../img/hm3.png';
-import bgimg from '../img/homebg.png';
+import img from '../img/homebg.png';
 
 export const Home = () =>{
     return(
         <div style={{ //backgroundColor: 'lightblue',
             minHeight: "100vh", 
-        backgroundImage: `url(${bgimg})`,
+        backgroundImage: `url(${img})`,
         backgroundSize: 'cover',
          }}>
         <>
