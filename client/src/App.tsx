@@ -14,8 +14,12 @@ import { Blog } from "./pages/journaling.tsx";
 import { UpdateUserBlog } from "./pages/updateBlog.tsx";
 import { UserBlogs } from "./pages/showblog.tsx";
 import { Profile } from "./pages/profile.tsx";
+<<<<<<< HEAD
+// import Tracker from "./pages/Tracker.tsx";÷import { Habit } from "./pages/new-habit.js";
+=======
 //import Tracker from "./pages/Tracker.tsx";
 //import { Habit } from "./pages/new-habit.js";
+>>>>>>> origin/main
 import { store } from "./redux/store"; 
 // import { PersonalityTest } from "./pages/personality.tsx";
 import { PersonalityTest } from "./pages/pe.tsx";
@@ -126,6 +130,12 @@ function App() {
               <Link to="/profile" style={linkStyle}>
                 Profile
               </Link>
+<<<<<<< HEAD
+              {/* <Link to="/tracker" style={linkStyle}>
+                Tracker
+              </Link> */}
+=======
+>>>>>>> origin/main
               <Link to="/pe" style={linkStyle}>
                 Personality Test
               </Link>
@@ -158,6 +168,11 @@ function App() {
           <Route path="/journaling" element={<Blog />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/showblog" element={<UserBlogs />} />
+<<<<<<< HEAD
+          {/* <Route path="/tracker" element={<Tracker />} /> */}
+          {/* <Route path="/new-habit" element={<Habit />} /> */}
+=======
+>>>>>>> origin/main
           <Route path="/pe" element={<PersonalityTest />} />
           <Route path="*" element={<h1>you are not in a page</h1>} />
           <Route path="/updateBlog/:blogId" element={<UpdateUserBlog />} />

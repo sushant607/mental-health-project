@@ -7,17 +7,17 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import {store} from './redux/store.ts'; 
 import { ThemeProvider } from '@mui/material/styles';
-import theme from './ui/Theme.js';
+// import theme from './ui/Theme.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ThemeProvider theme={theme}>
+  // <ThemeProvider theme={theme}>
   <Provider store={store}>
   <React.StrictMode>
     <App />
   </React.StrictMode>
   </Provider>
-  </ThemeProvider>
+  // </ThemeProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

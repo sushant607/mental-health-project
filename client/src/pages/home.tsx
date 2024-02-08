@@ -1,8 +1,14 @@
 import React from 'react';
+import img1 from '../img/home1.jpeg';
+import img2 from '../img/home2.jpeg';
+import img3 from '../img/home3.jpeg';
+ import Testimonial from './components/Testimonial';
+// import TestimonialCard from './components/TestimonialCard';
 import {Container} from "react-bootstrap";
 import img1 from '../img/hm1.png';
 import img2 from '../img/hm2.png';
 import img3 from '../img/hm3.png';
+import bgimg from '../img/homebg.png';
 import img from '../img/11.png';
 
 export const Home = () =>{
@@ -61,7 +67,9 @@ export const Home = () =>{
                 </div>
             </div>
         </div>
-        
+        <div>
+        <Testimonial></Testimonial>
+        </div>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
