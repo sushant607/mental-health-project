@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Card } from "react-bootstrap";
 import "./Personality.css";
-// import pebg from  '../img/pebg.jpeg'
+import pebg from  '../img/pebg.jpeg';
 interface Question {
   q: string;
   f: string;
@@ -73,13 +73,13 @@ export const PersonalityTest: React.FC = () => {
       if (data.f !== "") {
         answeredCount++;
         if (counter < 5 && data.f === "Yes") {
-          newAPercent.N = (newAPercent.N + 20) / answeredCount;
+          newAPercent.N = (newAPercent.N + 20);
         } else if (counter >= 5 && counter < 10 && data.f === "Yes") {
-          newAPercent.A = (newAPercent.A + 20) / answeredCount;
+          newAPercent.A = (newAPercent.A + 20) ;
         } else if (counter >= 10 && counter < 15 && data.f === "Yes") {
-          newAPercent.B = (newAPercent.B + 20) / answeredCount;
+          newAPercent.B = (newAPercent.B + 20) ;
         } else if (counter >= 15 && counter < 20 && data.f === "Yes") {
-          newAPercent.C = (newAPercent.C + 20) / answeredCount;
+          newAPercent.C = (newAPercent.C + 20);
         }
       }
       counter++;
@@ -90,9 +90,9 @@ export const PersonalityTest: React.FC = () => {
 
   const handleNextQuestion = () => {
     setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
-    if (currentQuestionIndex === questions.length) {
-      handleSubmit(); // Calculate personality type and display results on last question
-    }
+    // if (currentQuestionIndex === questions.length) {
+    //   handleSubmit(); 
+    // }
   };
 
   const handlePreviousQuestion = () => {
@@ -201,8 +201,8 @@ export const PersonalityTest: React.FC = () => {
 
         }}>
         {(personalityType && careerChoices) || submitButtonClicked ? (
-          <div>
-            <h2>Your Personality Type: {personalityType}</h2>
+          <div className="output" style={{backgroundColor:"yellow"}}>
+            <h2 style={{textAlign:"center"}}>Your Personality Type: {personalityType}</h2>
             <h4>Recommended Career Choices:</h4>
             <p>{careerChoices}</p>
           </div>
@@ -219,6 +219,7 @@ export const PersonalityTest: React.FC = () => {
                     flexDirection: "column",
                     justifyContent: "center",
                     height: "300px",
+                    marginLeft:"20px"
                     // backgroundColor: "#FFB000",
                     // background:"linear-gradient(to right,white,#71C9CE)"
                   }}

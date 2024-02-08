@@ -3,7 +3,7 @@ import { Form, Button, Card } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { Link , useNavigate } from 'react-router-dom';
 import axios from "axios";
-// import bgimg from '../img/sign.jpg';
+import bgimg from '../img/mI.png';
 
 export const Sign = () => {
   const [email, setEmail] = useState('');
@@ -27,7 +27,7 @@ export const Sign = () => {
     id='signuppp'
       style={{
         minHeight: '100vh',
-        // backgroundImage: `url(${bgimg})`,
+        backgroundImage: `url(${bgimg})`,
         backgroundSize: 'cover',
       }}
     >
@@ -62,9 +62,11 @@ export const Sign = () => {
                       onChange={(e) => setPassword(e.target.value)}
                     />
                   </Form.Group>
-                  <Button type="submit" className="w-100 mt-3">
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                  <Button type="submit" className="b">
                     Sign up
                   </Button>
+                  </div>
                 </Form>
               </Card.Body>
               <Card.Footer>

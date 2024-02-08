@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Form, Button, Card, Container } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
+import bgimg from '../img/signbg.png';
 
 export const UserBlogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -53,7 +54,8 @@ export const UserBlogs = () => {
     <div>
       {blogs && blogs.length > 0 ? (
         blogs.map((blog) => (
-          <Card key={blog._id} style={{ marginBottom: "20px" }}>
+          <Card key={blog._id} style={{ marginBottom: "20px",backgroundImage: `url(${bgimg})`,
+          backgroundSize: 'cover' }}>
             <Card.Body>
               <Card.Title>{blog.title}</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">

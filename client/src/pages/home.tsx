@@ -1,23 +1,21 @@
 import React from 'react';
-<<<<<<< HEAD
 import img1 from '../img/home1.jpeg';
 import img2 from '../img/home2.jpeg';
 import img3 from '../img/home3.jpeg';
  import Testimonial from './components/Testimonial';
 // import TestimonialCard from './components/TestimonialCard';
-=======
 import {Container} from "react-bootstrap";
 import img1 from '../img/hm1.png';
 import img2 from '../img/hm2.png';
 import img3 from '../img/hm3.png';
 import bgimg from '../img/homebg.png';
->>>>>>> origin/main
+import img from '../img/11.png';
 
 export const Home = () =>{
     return(
         <div style={{ //backgroundColor: 'lightblue',
             minHeight: "100vh", 
-        backgroundImage: `url(${bgimg})`,
+        backgroundImage: `url(${img})`,
         backgroundSize: 'cover',
          }}>
         <>
