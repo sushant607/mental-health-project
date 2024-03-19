@@ -32,11 +32,7 @@
 
 ## 📝Description
 
-<<<<<<< HEAD
-Add your **project description** here. Your project description should cover how your website/app works. That way you can convey what your project is without the need for anyone to view the code. A more *detailed README* in your project repository is encouraged, which can include build and use instructions etc.
-=======
-Add your *project description* here. Your project description should cover how your website/app works. That way you can convey what your project is without the need for anyone to view the code. A more detailed README in your project repository is encouraged, which can include build and use instructions etc.
->>>>>>> dfed6d7f6b6a8786672589f50b9a00bd767bce78
+
 
 1. Include features and their usecases in bullet points
 
